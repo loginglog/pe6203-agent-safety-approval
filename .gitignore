@@ -1,0 +1,30 @@
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Python and testing caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Package build outputs
+build/
+dist/
+*.egg-info/
+
+# Local execution outputs; preserve original logs separately
+results/raw/
+*.log
+
+# Editor and operating system files
+.DS_Store
+.idea/
+.vscode/
+~$*
