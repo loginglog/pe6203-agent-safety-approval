@@ -1,0 +1,456 @@
+{
+  "record_type": "Independent-request offline runner integration; no official task or scoring",
+  "date_singapore": "2026-10-19",
+  "policy_version": "file-rules-v0.4.0",
+  "validation": {
+    "record_type": "Independent-request mock integration through the existing runner; no benchmark scoring",
+    "timestamp_utc": "2026-10-19T11:34:10.695136+00:00",
+    "policy_version": "file-rules-v0.4.0",
+    "tests_run": 35,
+    "failures": 0,
+    "errors": 0,
+    "successful": true,
+    "modules": [
+      "test_approval_gate",
+      "test_runner_v0_4_independent"
+    ],
+    "all_official_tools_retained": 24,
+    "network_disabled": true,
+    "real_clients_and_key_loaders_disabled": true,
+    "existing_sdk_local_mock_transport_only": true,
+    "official_task_loading_and_properties_blocked": true,
+    "official_evaluators_blocked": true,
+    "real_model_api_requests": 0,
+    "actual_provider_usage_or_cost_obtained": false,
+    "observations": [
+      {
+        "check": "test_runner_v0_4_independent.IndependentRunnerTests.test_a_location_review_append_final_and_component_usage",
+        "run_directory": "results/raw/runner_v0_4_checks_pg0_nh92/independent_runner_36wszp3v/task_run_zsye16t9",
+        "mock_requests": {
+          "agent": 3,
+          "policy": 0,
+          "reviewer": 1
+        },
+        "policy_version": "file-rules-v0.4.0",
+        "final_answer_received": true,
+        "review_budget_used": 1,
+        "actual_tool_body_calls": [
+          "search_files_by_filename",
+          "append_to_file"
+        ],
+        "independent_tool_dependency_matches_snapshots": true,
+        "decisions": [
+          "auto-approve",
+          "escalate"
+        ],
+        "reason_codes": [
+          "A_MUTATION_LOOKUP",
+          "E_MUTATION_REVIEW"
+        ],
+        "environment_changed": true,
+        "stop_reason": null,
+        "errors": [],
+        "official_evaluation_enabled": false
+      },
+      {
+        "check": "test_runner_v0_4_independent.IndependentRunnerTests.test_b_multiple_calls_identity_reads_and_unrequested_actions",
+        "run_directory": "results/raw/runner_v0_4_checks_pg0_nh92/independent_runner_y1fh0cle/task_run_v5vy69ob",
+        "mock_requests": {
+          "agent": 3,
+          "policy": 0,
+          "reviewer": 0
+        },
+        "policy_version": "file-rules-v0.4.0",
+        "final_answer_received": true,
+        "review_budget_used": 0,
+        "actual_tool_body_calls": [
+          "search_files_by_filename",
+          "search_files_by_filename",
+          "get_file_by_id",
+          "get_file_by_id"
+        ],
+        "independent_tool_dependency_matches_snapshots": true,
+        "decisions": [
+          "auto-approve",
+          "auto-approve",
+          "auto-approve",
+          "auto-approve",
+          "auto-deny",
+          "auto-deny",
+          "auto-deny",
+          "escalate"
+        ],
+        "reason_codes": [
+          "A_NAMED_LOOKUP",
+          "A_NAMED_LOOKUP",
+          "A_SCOPED_READ",
+          "A_SCOPED_READ",
+          "D_OPERATION_NOT_AUTHORIZED",
+          "D_OPERATION_NOT_AUTHORIZED",
+          "D_OPERATION_NOT_AUTHORIZED",
+          "E_NON_FILE_TOOL"
+        ],
+        "environment_changed": false,
+        "stop_reason": null,
+        "errors": [],
+        "official_evaluation_enabled": false
+      },
+      {
+        "check": "test_runner_v0_4_independent.IndependentRunnerTests.test_c_denial_reaches_agent_and_does_not_enter_mutation",
+        "run_directory": "results/raw/runner_v0_4_checks_pg0_nh92/independent_runner_giyz_xz0/task_run_wrli6h1b",
+        "mock_requests": {
+          "agent": 3,
+          "policy": 0,
+          "reviewer": 1
+        },
+        "policy_version": "file-rules-v0.4.0",
+        "final_answer_received": true,
+        "review_budget_used": 1,
+        "actual_tool_body_calls": [
+          "search_files_by_filename"
+        ],
+        "independent_tool_dependency_matches_snapshots": true,
+        "decisions": [
+          "auto-approve",
+          "escalate"
+        ],
+        "reason_codes": [
+          "A_MUTATION_LOOKUP",
+          "E_MUTATION_REVIEW"
+        ],
+        "environment_changed": false,
+        "stop_reason": null,
+        "errors": [],
+        "official_evaluation_enabled": false
+      },
+      {
+        "check": "test_runner_v0_4_independent.IndependentRunnerTests.test_c_malformed_review_is_an_error_not_denial_and_reaches_agent",
+        "run_directory": "results/raw/runner_v0_4_checks_pg0_nh92/independent_runner_mawiqd9r/task_run_b3f595wv",
+        "mock_requests": {
+          "agent": 3,
+          "policy": 0,
+          "reviewer": 1
+        },
+        "policy_version": "file-rules-v0.4.0",
+        "final_answer_received": true,
+        "review_budget_used": 1,
+        "actual_tool_body_calls": [
+          "search_files_by_filename"
+        ],
+        "independent_tool_dependency_matches_snapshots": true,
+        "decisions": [
+          "auto-approve",
+          "escalate"
+        ],
+        "reason_codes": [
+          "A_MUTATION_LOOKUP",
+          "E_MUTATION_REVIEW"
+        ],
+        "environment_changed": false,
+        "stop_reason": null,
+        "errors": [
+          {
+            "component": "reviewer",
+            "category": "ReviewerFormatError"
+          }
+        ],
+        "official_evaluation_enabled": false
+      },
+      {
+        "check": "test_runner_v0_4_independent.IndependentRunnerTests.test_d_cumulative_budget_not_reset_across_agent_turns",
+        "run_directory": "results/raw/runner_v0_4_checks_pg0_nh92/independent_runner_lg1uv1_u/task_run_av8x4_y9",
+        "mock_requests": {
+          "agent": 4,
+          "policy": 0,
+          "reviewer": 1
+        },
+        "policy_version": "file-rules-v0.4.0",
+        "final_answer_received": true,
+        "review_budget_used": 1,
+        "actual_tool_body_calls": [
+          "search_files_by_filename",
+          "append_to_file"
+        ],
+        "independent_tool_dependency_matches_snapshots": true,
+        "decisions": [
+          "auto-approve",
+          "escalate",
+          "escalate"
+        ],
+        "reason_codes": [
+          "A_MUTATION_LOOKUP",
+          "E_MUTATION_REVIEW",
+          "E_MUTATION_REVIEW"
+        ],
+        "environment_changed": true,
+        "stop_reason": null,
+        "errors": [],
+        "official_evaluation_enabled": false
+      },
+      {
+        "check": "test_runner_v0_4_independent.IndependentRunnerTests.test_d_new_invocations_clone_environment_and_reset_budget",
+        "run_directory": "results/raw/runner_v0_4_checks_pg0_nh92/independent_runner_5wkhu2dn/task_run_hgj4fan7",
+        "mock_requests": {
+          "agent": 3,
+          "policy": 0,
+          "reviewer": 1
+        },
+        "policy_version": "file-rules-v0.4.0",
+        "final_answer_received": true,
+        "review_budget_used": 1,
+        "actual_tool_body_calls": [
+          "search_files_by_filename",
+          "append_to_file"
+        ],
+        "independent_tool_dependency_matches_snapshots": true,
+        "decisions": [
+          "auto-approve",
+          "escalate"
+        ],
+        "reason_codes": [
+          "A_MUTATION_LOOKUP",
+          "E_MUTATION_REVIEW"
+        ],
+        "environment_changed": true,
+        "stop_reason": null,
+        "errors": [],
+        "official_evaluation_enabled": false
+      },
+      {
+        "check": "test_runner_v0_4_independent.IndependentRunnerTests.test_d_new_invocations_clone_environment_and_reset_budget",
+        "run_directory": "results/raw/runner_v0_4_checks_pg0_nh92/independent_runner_5wkhu2dn/task_run_wfs53om8",
+        "mock_requests": {
+          "agent": 3,
+          "policy": 0,
+          "reviewer": 1
+        },
+        "policy_version": "file-rules-v0.4.0",
+        "final_answer_received": true,
+        "review_budget_used": 1,
+        "actual_tool_body_calls": [
+          "search_files_by_filename",
+          "append_to_file"
+        ],
+        "independent_tool_dependency_matches_snapshots": true,
+        "decisions": [
+          "auto-approve",
+          "escalate"
+        ],
+        "reason_codes": [
+          "A_MUTATION_LOOKUP",
+          "E_MUTATION_REVIEW"
+        ],
+        "environment_changed": true,
+        "stop_reason": null,
+        "errors": [],
+        "official_evaluation_enabled": false
+      },
+      {
+        "check": "test_runner_v0_4_independent.IndependentRunnerTests.test_d_zero_budget_no_reviewer_request",
+        "run_directory": "results/raw/runner_v0_4_checks_pg0_nh92/independent_runner_7sgbwq3d/task_run_75w6apod",
+        "mock_requests": {
+          "agent": 3,
+          "policy": 0,
+          "reviewer": 0
+        },
+        "policy_version": "file-rules-v0.4.0",
+        "final_answer_received": true,
+        "review_budget_used": 0,
+        "actual_tool_body_calls": [
+          "search_files_by_filename"
+        ],
+        "independent_tool_dependency_matches_snapshots": true,
+        "decisions": [
+          "auto-approve",
+          "escalate"
+        ],
+        "reason_codes": [
+          "A_MUTATION_LOOKUP",
+          "E_MUTATION_REVIEW"
+        ],
+        "environment_changed": false,
+        "stop_reason": null,
+        "errors": [],
+        "official_evaluation_enabled": false
+      },
+      {
+        "check": "test_runner_v0_4_independent.IndependentRunnerTests.test_parameter_replacement_and_optional_reads_preserve_wiring",
+        "run_directory": "results/raw/runner_v0_4_checks_pg0_nh92/independent_runner_bgh8vc86/task_run_529cfxzf",
+        "mock_requests": {
+          "agent": 3,
+          "policy": 0,
+          "reviewer": 0
+        },
+        "policy_version": "file-rules-v0.4.0",
+        "final_answer_received": true,
+        "review_budget_used": 0,
+        "actual_tool_body_calls": [
+          "search_files_by_filename",
+          "get_file_by_id"
+        ],
+        "independent_tool_dependency_matches_snapshots": true,
+        "decisions": [
+          "auto-approve",
+          "auto-approve"
+        ],
+        "reason_codes": [
+          "A_NAMED_LOOKUP",
+          "A_SCOPED_READ"
+        ],
+        "environment_changed": false,
+        "stop_reason": null,
+        "errors": [],
+        "official_evaluation_enabled": false
+      },
+      {
+        "check": "test_runner_v0_4_independent.IndependentRunnerTests.test_shared_request_cap_blocks_review_and_counts_invocation",
+        "run_directory": "results/raw/runner_v0_4_checks_pg0_nh92/independent_runner_lmwy_deu/task_run_2_patfto",
+        "mock_requests": {
+          "agent": 2,
+          "policy": 0,
+          "reviewer": 0
+        },
+        "policy_version": "file-rules-v0.4.0",
+        "final_answer_received": false,
+        "review_budget_used": 1,
+        "actual_tool_body_calls": [
+          "search_files_by_filename"
+        ],
+        "independent_tool_dependency_matches_snapshots": true,
+        "decisions": [
+          "auto-approve",
+          "escalate"
+        ],
+        "reason_codes": [
+          "A_MUTATION_LOOKUP",
+          "E_MUTATION_REVIEW"
+        ],
+        "environment_changed": false,
+        "stop_reason": "RequestLimitError",
+        "errors": [
+          {
+            "component": "agent_or_pipeline",
+            "category": "RequestLimitError"
+          },
+          {
+            "component": "reviewer",
+            "category": "RequestLimitError"
+          }
+        ],
+        "official_evaluation_enabled": false
+      },
+      {
+        "check": "test_runner_v0_4_independent.IndependentRunnerTests.test_turn_limit_retains_executed_effect_without_final_or_score",
+        "run_directory": "results/raw/runner_v0_4_checks_pg0_nh92/independent_runner_ctkshk96/task_run_dkq6u2ha",
+        "mock_requests": {
+          "agent": 2,
+          "policy": 0,
+          "reviewer": 1
+        },
+        "policy_version": "file-rules-v0.4.0",
+        "final_answer_received": false,
+        "review_budget_used": 1,
+        "actual_tool_body_calls": [
+          "search_files_by_filename",
+          "append_to_file"
+        ],
+        "independent_tool_dependency_matches_snapshots": true,
+        "decisions": [
+          "auto-approve",
+          "escalate"
+        ],
+        "reason_codes": [
+          "A_MUTATION_LOOKUP",
+          "E_MUTATION_REVIEW"
+        ],
+        "environment_changed": true,
+        "stop_reason": "AgentTurnLimitError",
+        "errors": [
+          {
+            "component": "agent_or_pipeline",
+            "category": "AgentTurnLimitError"
+          }
+        ],
+        "official_evaluation_enabled": false
+      }
+    ],
+    "raw_directory": "results/raw/runner_v0_4_checks_pg0_nh92",
+    "excluded": [
+      "Full test discovery",
+      "Legacy official-task runner/spending/timeout cases",
+      "All official request/gold/checker and coverage probes",
+      "All attack-preparation entry points"
+    ],
+    "source_sha256": {
+      "src/approval_gate/scripted.py": "5121b8241a154f09ca45af2fbd74a0b4e479fd7f9df736a9cd3dc62d486bfc30",
+      "src/approval_gate/task29_preparation.py": "f749828f1fd77b54bc50df272ccee993e8010a45804f7a2a14b3126b38df328b",
+      "src/approval_gate/tool_facts.py": "2fe73fba8f069ad70ce31c08159aa10c9ce0deeccd5ed02d67699521756783a0",
+      "src/approval_gate/development_v0_2.py": "25e63e32079cbbd39c4a1e1e055ed7c2e8b40935623bc5a28d1e8f8ce376bea3",
+      "src/approval_gate/file_policy_v0_4.py": "b990d75e62e119bda73342f56d554b15e852b06b5e44104f42753a1fb632a004",
+      "src/approval_gate/policies_v0_1.py": "ea98b40ec0603a173861390615ddfeb5d4356ecc8dd8e127a1888d3289a52e9b",
+      "src/approval_gate/evaluation.py": "f1bc7a965b662afa41612f1d8f5c78f4d3fc65c819de77731197dd148099d7b6",
+      "src/approval_gate/llm_reviewer.py": "e64269acb98cb5e07cb87dd3ea862cd956c6805f9410ac13a99212b053227dd5",
+      "src/approval_gate/task_runner.py": "db8d47190d5674a4eabfa25e0587b0100ba7cdd369180369991af772adb28c06",
+      "src/approval_gate/__init__.py": "a605557693d65031aad962ac7c124323f4714ce466571931b8bab1ff9e4a6e72",
+      "src/approval_gate/offline.py": "712f5dcd5446dfd3bfed93363f0dbe97e8ad0596d95ab4312a224f69492d19c6",
+      "src/approval_gate/completions.py": "79a2d8d270fe7cd4b2ee3e1d5d767d72913ca55f83b3419d23ad7e8828dacb4f",
+      "src/approval_gate/policy_comparison.py": "e080793ec4710c8b293ec4448937eefc78fc3d01feb2082275ca749fbc2350d3",
+      "src/approval_gate/file_policy_v0_3.py": "62f8bce3143c43cbcf2fde12c35fbf6849cbecd0413a6d7dc597123d13e7710d",
+      "src/approval_gate/policies.py": "dc21fa88f248b6ee05a46471e78e4797bdfa98ed0ff0e763951e42edcce4e303",
+      "src/approval_gate/executor.py": "9504123e5dd4894973e153d3947165ba4484ec34902716dbd053814e29d86b81",
+      "src/approval_gate/file_policy_v0_2.py": "456e904aeb9df8c638cdc9c534c2f212bb04e04d7440b5c27650f269184c4323",
+      "src/approval_gate/spend_control.py": "ab93c72142bbfc1611130130f429e9f780706322e00df3735ba8ddfb2f0b2f07",
+      "src/approval_gate/file_policy_v0_3_1.py": "86e637d4a4b2454baf20e39ffc7b1741df9ab11de36e1863c4cdd8ac163a43cd"
+    }
+  },
+  "final_successful_suite_only": {
+    "mock_pipeline_invocations": 11,
+    "mock_requests_by_component": {
+      "agent": 32,
+      "policy": 0,
+      "reviewer": 7
+    },
+    "actual_official_tool_body_entries": 20,
+    "real_model_api_requests": 0,
+    "provider_costs_obtained": false
+  },
+  "implementation_changes": [
+    "Optional IndependentCase hook into existing run_task; plan/mock only, cloned environment, explicit independent identity, no official task loader/evaluator",
+    "Independent-only mock provenance/request counters and environment snapshots",
+    "Independent-only stop-reason correction when a final answer follows a reviewer error; reviewer errors preserved",
+    "Independent-only synthetic cost provenance; actual provider estimates/reported costs remain null, including zero-request components; no billing formula changed"
+  ],
+  "new_files": [
+    "tests/test_runner_v0_4_independent.py",
+    "scripts/check_runner_v0_4.py",
+    "docs/RUNNER_V0_4_OFFLINE.md"
+  ],
+  "unchanged_protected_file_count": 55,
+  "preserved": [
+    "All candidate and baseline rules/versions",
+    "Approval gate and per-task budget semantics",
+    "Prompts",
+    "CompletionGateway, spending formula and timeout settings",
+    "Existing tests/configs/results and original logs"
+  ],
+  "prior_attempts_preserved": [
+    "results/raw/runner_v0_4_checks_7kr6bxoy/summary.json",
+    "results/raw/runner_v0_4_checks_2budviic/summary.json",
+    "results/raw/runner_v0_4_checks_is1ao7qp/summary.json",
+    "results/raw/runner_v0_4_checks_umzk3k6b/summary.json"
+  ],
+  "first_failure": "The initial34-test attempt detected a misleading stop_reason after a reviewer format error and a received final answer; retained and corrected for independent logs only.",
+  "official_user_requests_gold_or_checkers_accessed": false,
+  "restricted_preparation_resumed": false,
+  "full_suite_run": false,
+  "new_paid_or_formal_run": false,
+  "formal_settings_selected": false,
+  "raw_directory": "results/raw/runner_v0_4_checks_pg0_nh92",
+  "preparation_directory": "results/raw/runner_v0_4_integration_lv_n8a9_",
+  "limitations": [
+    "SDK HTTP mocks do not verify live model/provider behavior or real billing.",
+    "Official task loading/scoring path was not executed; its default route was checked with a nonexecuting stub.",
+    "Full task/model/spend/timeout/attack suites were excluded because they can load official task/evaluation content or are outside this bounded check.",
+    "No official utility/security/TCR@k result exists for these independent cases."
+  ]
+}

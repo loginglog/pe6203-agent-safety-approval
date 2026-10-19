@@ -1,0 +1,59 @@
+{
+  "record_type": "documentation_only_course_requirements_handoff",
+  "date_singapore": "2026-10-19",
+  "original_assignment_sha256": "6f65893f88178d6dd2a2a75924e4f5897f492b1adb647f09922bda4ceb8529bc",
+  "source_locators": "Original named sections and one-based OOXML paragraphs, not page numbers",
+  "documents_updated": [
+    "README.md",
+    "docs/handoff.md",
+    "docs/experiment-plan.md",
+    "docs/SCORING.md",
+    "docs/setup.md",
+    "docs/LLM_REVIEWER_AND_TASK_RUNNER.md"
+  ],
+  "document_created": "docs/COURSE_REQUIREMENTS.md",
+  "archive": "docs/archive/PRE_REQUIREMENTS_HANDOFF_20261019.json",
+  "local_links_and_anchors_checked": 103,
+  "explicit_requirement_rows": 26,
+  "protected_files_unchanged": 129,
+  "historical_offline_test_count": 191,
+  "full_test_suite_rerun": false,
+  "demos_rerun": false,
+  "model_api_requests": 0,
+  "real_task_runs": 0,
+  "attack_work_resumed": false,
+  "credentials_read": false,
+  "git_staged": false,
+  "git_committed": false,
+  "git_pushed": false,
+  "git_head": "0431a069e5faaaed49c103f6bd8c5ba5d9ad0c3e",
+  "remote_checked_online": false,
+  "local_cached_upstream_ahead_behind": "0/0",
+  "delivery_status": "Local documents prepared; implementation largely untracked; no remote handoff established; ignored raw evidence needs authorized sharing",
+  "pending_author_decisions": [
+    "Formal Workspace tasks",
+    "Meaningful k range and other comparison settings",
+    "Operational unauthorized-execution criterion, uncertain findings and denominator handling",
+    "Evidence for both required failure types",
+    "Model/runtime/spending authorizations",
+    "Tested revision publication and private evidence access"
+  ],
+  "checks_passed": [
+    "Referenced local files/anchors exist",
+    "New document tables/fences/whitespace valid",
+    "Original assignment hash and 26 requirement rows verified",
+    "Documented CLI parameters match parser and --help was inspected",
+    "Implementation/config/prompts/tests/results/audit evidence unchanged",
+    "Prior document texts preserved exactly",
+    "No staging/commit change and private paths still ignored"
+  ],
+  "document_sha256": {
+    "README.md": "7b125b032f0c0d7d6c3933e1594e218143aa30ed4f5edb89fd8700ce5c2516c5",
+    "docs/handoff.md": "f4284a26458bc06d04a4e17ca4b94fc3951a55b5d20224157c4b8dd70f08e10b",
+    "docs/experiment-plan.md": "16e909092a1cce72ee57c5203d2a0af16d90795a651de61c003189cc2e973cdd",
+    "docs/SCORING.md": "62e5a50b965a2170ffae062fe40ab3f141a398dcdd2901ac6db44af270d58415",
+    "docs/setup.md": "9558bd5c49f47f7499d66932a0fd4ae233f6bfed01914fd53ae9448a8cf7d4b3",
+    "docs/LLM_REVIEWER_AND_TASK_RUNNER.md": "5ed5271cad2607dd93884c20a8f77989a10fe98e7d81c935cd8a384a4f9c435a",
+    "docs/COURSE_REQUIREMENTS.md": "1511d606dde64ba07be0d666825eaba26b6de94a4e4f3ebb125d1781f5c43fcb"
+  }
+}

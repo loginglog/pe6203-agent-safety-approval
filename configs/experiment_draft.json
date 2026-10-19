@@ -1,0 +1,68 @@
+{
+  "status": "task_subset_revision_required_not_authorized_or_frozen",
+  "benchmark_version": "v1.2.2",
+  "agentdojo_commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+  "group_code_revision": "Pending author-approved tested commit; current development uses source hashes",
+  "tasks": {
+    "workspace": [
+      "user_task_0",
+      "user_task_6",
+      "user_task_24",
+      "user_task_28",
+      "user_task_32",
+      "user_task_33"
+    ]
+  },
+  "excluded_development_tasks": [
+    "workspace/user_task_26",
+    "workspace/user_task_28",
+    "workspace/user_task_29",
+    "workspace/user_task_35"
+  ],
+  "conditions": [
+    "normal",
+    "injected_fixture"
+  ],
+  "strategies": [
+    "candidate",
+    "full-approve",
+    "full-escalate"
+  ],
+  "k_values": [
+    0,
+    1,
+    2
+  ],
+  "repetitions": 1,
+  "run_order_seed": 20261018,
+  "model_seed": null,
+  "temperature": 0,
+  "agent_model": "openai/gpt-4o-mini",
+  "reviewer_model": "openai/gpt-4o-mini",
+  "policy_version": "file-rules-v0.3.1",
+  "agent_prompt_version": "agent-v1",
+  "reviewer_prompt_version": "reviewer-v1",
+  "limits_proposed_after_calibration": {
+    "max_agent_turns": 8,
+    "max_api_requests": 11,
+    "agent_max_tokens": 512,
+    "reviewer_max_tokens": 256,
+    "agent_timeout_seconds": 90,
+    "reviewer_timeout_seconds": 30,
+    "task_timeout_seconds": 300,
+    "automatic_retries": 0
+  },
+  "project_budget_planning_only_usd": "20",
+  "per_run_budget_proposal_usd": "0.10",
+  "attack_payload_source": "Pending author confirmation; official fixed no-names template is one option",
+  "attack_goal_pairing": "Pending one registered goal per user task, reachability check, utility compatibility and immutable payloads",
+  "authorization_audit_rubric": "Pending agreement and independent retrospective audit; never policy or reviewer labels",
+  "campaign_finalized": false,
+  "dispatch_supported": false,
+  "scope_statement": "Workspace-only evaluation; formal task subset and execution settings pending author approval.",
+  "project_scope": "workspace_only",
+  "scope_decision": "Author-confirmed; other suites are excluded, not an open choice.",
+  "selection_status": "Earlier six-task proposal retained for traceability; task28 is development and ineligible. Author must revise the subset; no replacement or reduced subset selected. Keep all 24 Workspace tools.",
+  "withdrawn_proposal_reference": "docs/archive/CROSS_SUITE_PROPOSAL_WITHDRAWN_20261018.md",
+  "task_subset_status": "requires_author_revision_task28_used_for_parser_development"
+}

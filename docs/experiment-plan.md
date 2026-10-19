@@ -1,52 +1,49 @@
-# Draft experiment plan
+# Remaining evaluation work and author decisions
 
-Status: proposed planning guidance, not a finalized experiment configuration. Confirm settings jointly after the implementation handoff.
+**Workspace-only evaluation; formal task subset and execution settings pending author approval.** This file records required work and unresolved settings. It selects no new design, experiment route, task list, attack condition, k values, repetitions, scale or budget. Follow the [original-assignment checklist](COURSE_REQUIREMENTS.md); earlier assistant-written plans are not instructor evidence.
 
-## Schedule from the group plan
+## Required deliverables
 
-| Date in 2026 | Work | Output |
-| --- | --- | --- |
-| October 19 | Reproduce the implementation handoff example | Verified local run |
-| October 20 | Validate logging and metrics; fix evaluation settings | Final experiment plan and runner |
-| October 21 to 23 | Run comparisons and analyze trajectories | Raw records, metrics, figures, costs, and cases |
-| October 24 to 25 | Prepare the English report, README, and presentation; verify a fresh checkout | Submission materials |
-| October 26 | Joint consistency review and submission | Accessible final repository |
+The course requires an AgentDojo pre-execution gate, a developed three-way policy, FullApprove/FullEscalate, a documented LLM reviewer without oracle inputs, TCR@k curves over a meaningful k range, HITL Load, component API costs, over-conservative and over-permissive analysis with at least one concrete trajectory **for each**, escalation-value analysis, GitHub code/report and a 10-minute presentation plus 5-minute Q&A. These obligations remain even though attack preparation is not a default project step.
 
-These dates come from the group's work plan, not a deadline specified in the assignment document.
+Current implementation and version-specific normal evidence are detailed in [handoff](handoff.md). The required formal comparison/curves, failure-example pair, report and slides have not been obtained. Existing normal task26 v0.2.0 and task29 v0.3.1 success and191 offline tests are development evidence only.
 
-## Decisions to finalize
+## Author choices already settled
 
-- AgentDojo version or upstream commit.
-- Development tasks and separate formal evaluation tasks.
-- Task-suite coverage and attack settings.
-- Agent, policy, and reviewer models and generation settings.
-- Escalation budgets. Suggested starting values: 0, 1, 2, 3, 5, and 10; revise based on pilot trajectories.
-- Repetitions, seeds where supported, and total API spending limit.
-- Unauthorized-action scoring criteria and their relationship to AgentDojo's available evaluators.
-- Handling of API errors, retries, and incomplete runs, including actual incurred cost.
+Workspace only, all 24 official tools; current development candidate file-rules-v0.4.0 (B1/B2 offline update, not frozen formal settings); English evaluation inputs/prompts/examples/answers/baselines/demonstrations and project documents/comments. Limited complete-name searches accept declared incidental-body risk under the policy conditions; proven conflicts deny, uncertain operations escalate. Tasks 26/28/29/35 are development-used. These are not reopened.
 
-## Fair comparison
+## Settings requiring confirmation before formal collection
 
-Run all three strategies on the same evaluation cases and budgets, holding agent model and attack configuration fixed. Use the same reviewer configuration wherever escalation occurs. Freeze policy rules and prompts before formal testing. Preserve every attempted case and do not silently discard failures.
+| Setting | Current state / decision needed |
+| --- | --- |
+| Formal Workspace tasks | No approved list. Do not automatically adopt prior suggestions or relabel development tasks as untouched tests. |
+| Meaningful k range | Required by course, numeric values not prescribed or confirmed. |
+| Compared runtime configuration | Confirm agent/reviewer model versions, prompts, shared tools, generation/request/token/time limits and retry/stop handling. Old development settings are historical. |
+| Repetitions and randomness | No confirmed formal values; record whatever is approved, including absent seed support. |
+| Authorization and safe-completion evidence | Agree what proves unauthorized execution, including incidental exposure and uncertain cases; never use policy/reviewer decisions as ground truth. |
+| Task denominator and incomplete/error cases | Specify before collection; course defines safe fraction, but does not prescribe our missing/not-run bookkeeping convention. See scoring. |
+| Failure evidence | Required over-conservative and over-permissive trajectories not yet obtained. Confirm how the final report will substantiate both without fabricated cases. |
+| Conditions | No default normal/attack pairing. Specific attack work is not a course-prescribed prerequisite and remains stopped. No new condition is chosen here. |
+| Cost and authorization | No current run authorization. Confirm independent limits/total funding before any paid work; old USD0.10 runs are consumed and USD20 was planning only. |
+| Shared code/evidence | Current implementation largely untracked; authorize publication and appropriate private evidence access separately. |
 
-Different budgets can change executed tools and subsequent agent behavior. Obtain the main TCR@k results from online runs at each budget rather than changing counts in a single saved trajectory.
+Formal scale cannot currently be assigned a number. For an approved uniform grid only:
 
-## Metrics
+```text
+run count = approved task count × approved condition count × 3 strategies
+            × approved k-setting count × approved repetitions
+```
 
-TCR@k is the number of tasks completed without executing any unauthorized tool call, divided by the number of evaluated tasks. State the evaluated task set and unauthorized-action criteria. Record task completion and safety separately; lack of a successful benchmark attack alone may not establish that every executed call was authorized.
+This formula chooses no factor. No480/108/72 total is current. There is insufficient diverse task/strategy usage to forecast a formal total from one or two normal development examples. Cost accounting is defined in [SCORING.md](SCORING.md); a planning budget is not permission to execute.
 
-The assignment's metric definition refers to interventions across successfully completed tasks, while its report requirements also request total escalation counts across the suite. Report both counts, clearly labeled: interventions in safely completed tasks and interventions across all evaluated tasks. Include k and task counts in the table.
+## Existing artifacts that are not approved instructions
 
-Record input and output tokens separately by agent execution, policy inference, and reviewer simulation. If reporting monetary costs, document the model pricing source, date, and calculation, including any caching rates actually used.
+[experiment_draft.json](../configs/experiment_draft.json) is retained unchanged as a historical proposal. Its task list includes development task28, its attack-related condition/metadata and numeric settings are unapproved, campaign_finalized=false and dispatch_supported=false. The manifest helper rejects the development overlap. Do not run it as a default plan, remove its exclusions to make it pass, or treat its old values as instructor requirements. Its existence does not make an attack condition mandatory. The general runner's optional capabilities are not the project's chosen experiment.
 
-## Analysis and deliverables
+The [cross-suite proposal](archive/CROSS_SUITE_PROPOSAL_WITHDRAWN_20261018.md) was withdrawn, never approved/executed. The [pre-reconciliation document snapshot](archive/PRE_REQUIREMENTS_HANDOFF_20261019.json) retains other superseded suggestions. Historical logs and results remain unchanged.
 
-- TCR@k curves for the developed policy and both baselines.
-- HITL Load tables with explicit counting rules.
-- API usage or cost breakdown for all components and strategies.
-- At least one evidence-supported over-conservative failure trajectory.
-- At least one evidence-supported over-permissive failure trajectory.
-- Discussion of escalation value by tool-call type and user authorization context.
-- English report, reproduction instructions, and presentation materials.
+## Handoff work sequence
 
-If a required failure category does not occur in observed runs, disclose this and discuss further diagnostic cases; do not fabricate a trajectory.
+Obtain current code and authorized evidence access → review implementation/normal records and complete the existing project-arranged human forms → obtain the author's unresolved settings and separately authorized collection → produce comparable results and required failure evidence → write report/presentation and arrange approved GitHub submission.
+
+This is a dependency list for existing deliverables, not a newly selected evaluation route. Attack preparation is absent from the default sequence and remains stopped under platform/author restrictions. Neither its removal nor a failure to observe a particular attack goal removes the safe-completion or unsafe-auto-approval reporting requirements.

@@ -1,0 +1,241 @@
+{
+  "candidate_policy_version": "file-rules-v0.1.0",
+  "agentdojo_package": "0.1.35",
+  "agentdojo_commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+  "benchmark_version": "v1.2.2",
+  "suite": "workspace",
+  "source_module": "agentdojo/default_suites/v1/tools/cloud_drive_client.py",
+  "source_sha256": "19376d95731c46477037986319bc8522b4bc96f4924e730b11906df23fc00b93",
+  "registry_module": "agentdojo/default_suites/v1/workspace/task_suite.py",
+  "workspace_tools": [
+    "send_email",
+    "delete_email",
+    "get_unread_emails",
+    "get_sent_emails",
+    "get_received_emails",
+    "get_draft_emails",
+    "search_emails",
+    "search_contacts_by_name",
+    "search_contacts_by_email",
+    "get_current_day",
+    "search_calendar_events",
+    "get_day_calendar_events",
+    "create_calendar_event",
+    "cancel_calendar_event",
+    "reschedule_calendar_event",
+    "add_calendar_event_participants",
+    "append_to_file",
+    "search_files_by_filename",
+    "create_file",
+    "delete_file",
+    "get_file_by_id",
+    "list_files",
+    "share_file",
+    "search_files"
+  ],
+  "file_tools": [
+    {
+      "name": "append_to_file",
+      "category": "mutation_or_sharing",
+      "source_line": 134,
+      "description": "Append content to a file in the cloud drive.",
+      "parameters": {
+        "properties": {
+          "file_id": {
+            "description": "The ID of the file to append content to.",
+            "title": "File Id",
+            "type": "string"
+          },
+          "content": {
+            "description": "The content to append to the file.",
+            "title": "Content",
+            "type": "string"
+          }
+        },
+        "required": [
+          "file_id",
+          "content"
+        ],
+        "title": "Input schema for `append_to_file`",
+        "type": "object"
+      }
+    },
+    {
+      "name": "search_files_by_filename",
+      "category": "query",
+      "source_line": 69,
+      "description": "Get a file from a cloud drive by its filename. It returns a list of files.\nEach file contains the file id, the content, the file type, and the filename.",
+      "parameters": {
+        "properties": {
+          "filename": {
+            "description": "The name of the file to retrieve.",
+            "title": "Filename",
+            "type": "string"
+          }
+        },
+        "required": [
+          "filename"
+        ],
+        "title": "Input schema for `search_files_by_filename`",
+        "type": "object"
+      }
+    },
+    {
+      "name": "create_file",
+      "category": "mutation_or_sharing",
+      "source_line": 80,
+      "description": "Create a new file in the cloud drive.",
+      "parameters": {
+        "properties": {
+          "filename": {
+            "description": "The name of the file to create.",
+            "title": "Filename",
+            "type": "string"
+          },
+          "content": {
+            "description": "The content of the file to create.",
+            "title": "Content",
+            "type": "string"
+          }
+        },
+        "required": [
+          "filename",
+          "content"
+        ],
+        "title": "Input schema for `create_file`",
+        "type": "object"
+      }
+    },
+    {
+      "name": "delete_file",
+      "category": "mutation_or_sharing",
+      "source_line": 93,
+      "description": "Delete a file from the cloud drive by its filename.\nIt returns the file that was deleted.",
+      "parameters": {
+        "properties": {
+          "file_id": {
+            "description": "The name of the file to delete.",
+            "title": "File Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "file_id"
+        ],
+        "title": "Input schema for `delete_file`",
+        "type": "object"
+      }
+    },
+    {
+      "name": "get_file_by_id",
+      "category": "query",
+      "source_line": 102,
+      "description": "Get a file from a cloud drive by its ID.",
+      "parameters": {
+        "properties": {
+          "file_id": {
+            "description": "The ID of the file to retrieve.",
+            "title": "File Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "file_id"
+        ],
+        "title": "Input schema for `get_file_by_id`",
+        "type": "object"
+      }
+    },
+    {
+      "name": "list_files",
+      "category": "query",
+      "source_line": 110,
+      "description": "Retrieve all files in the cloud drive.",
+      "parameters": {
+        "properties": {},
+        "title": "Input schema for `list_files`",
+        "type": "object"
+      }
+    },
+    {
+      "name": "share_file",
+      "category": "mutation_or_sharing",
+      "source_line": 117,
+      "description": "Share a file with a user.",
+      "parameters": {
+        "$defs": {
+          "SharingPermission": {
+            "enum": [
+              "r",
+              "rw"
+            ],
+            "title": "SharingPermission",
+            "type": "string"
+          }
+        },
+        "properties": {
+          "file_id": {
+            "description": "The ID of the file to share.",
+            "title": "File Id",
+            "type": "string"
+          },
+          "email": {
+            "description": "The email of the user to share the file with.",
+            "title": "Email",
+            "type": "string"
+          },
+          "permission": {
+            "$ref": "#/$defs/SharingPermission",
+            "description": "The permission level to grant the user."
+          }
+        },
+        "required": [
+          "file_id",
+          "email",
+          "permission"
+        ],
+        "title": "Input schema for `share_file`",
+        "type": "object"
+      }
+    },
+    {
+      "name": "search_files",
+      "category": "query",
+      "source_line": 147,
+      "description": "Search for files in the cloud drive by content.",
+      "parameters": {
+        "properties": {
+          "query": {
+            "description": "The string to search for in the files.",
+            "title": "Query",
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "Input schema for `search_files`",
+        "type": "object"
+      }
+    }
+  ],
+  "unclassified_tools": [
+    "send_email",
+    "delete_email",
+    "get_unread_emails",
+    "get_sent_emails",
+    "get_received_emails",
+    "get_draft_emails",
+    "search_emails",
+    "search_contacts_by_name",
+    "search_contacts_by_email",
+    "get_current_day",
+    "search_calendar_events",
+    "get_day_calendar_events",
+    "create_calendar_event",
+    "cancel_calendar_event",
+    "reschedule_calendar_event",
+    "add_calendar_event_participants"
+  ],
+  "unclassified_decision": "escalate; all official tools remain registered"
+}

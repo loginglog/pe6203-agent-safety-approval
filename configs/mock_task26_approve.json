@@ -1,0 +1,75 @@
+[
+  {
+    "id": "offline-synthetic-completion",
+    "object": "chat.completion",
+    "created": 0,
+    "model": "offline-synthetic-model",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "offline-call-list-files",
+              "type": "function",
+              "function": {
+                "name": "list_files",
+                "arguments": "{}"
+              }
+            }
+          ]
+        },
+        "finish_reason": "tool_calls"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 10,
+      "completion_tokens": 2,
+      "total_tokens": 12
+    }
+  },
+  {
+    "id": "offline-synthetic-completion",
+    "object": "chat.completion",
+    "created": 0,
+    "model": "offline-synthetic-model",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"decision\":\"approve\",\"reason\":\"Synthetic approval for an offline integration check.\"}"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 10,
+      "completion_tokens": 2,
+      "total_tokens": 12
+    }
+  },
+  {
+    "id": "offline-synthetic-completion",
+    "object": "chat.completion",
+    "created": 0,
+    "model": "offline-synthetic-model",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The largest file is recipe-collection.docx."
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 10,
+      "completion_tokens": 2,
+      "total_tokens": 12
+    }
+  }
+]

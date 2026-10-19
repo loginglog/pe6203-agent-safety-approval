@@ -1,0 +1,80 @@
+{
+  "record_type": "Offline Workspace-only scope correction; not an experiment or model-performance result",
+  "date_singapore": "2026-10-18",
+  "scope_statement": "Workspace-only evaluation; formal task subset and execution settings pending author approval.",
+  "fixed_project_suite": "workspace",
+  "official_benchmark": "v1.2.2",
+  "policy_unchanged": "file-rules-v0.2.0",
+  "network_requests": 0,
+  "model_api_requests": 0,
+  "existing_credentials_read": false,
+  "development_task_ids": [
+    "user_task_26",
+    "user_task_29",
+    "user_task_35"
+  ],
+  "task29_status": "Offline only; live check pending independent authorization; settings and command unchanged",
+  "suggested_workspace_tasks": [
+    "user_task_0",
+    "user_task_6",
+    "user_task_24",
+    "user_task_28",
+    "user_task_32",
+    "user_task_33"
+  ],
+  "smaller_option": [
+    "user_task_0",
+    "user_task_24",
+    "user_task_28",
+    "user_task_32"
+  ],
+  "illustrative_scale": {
+    "formula": "tasks * conditions * strategies * k_settings * repetitions",
+    "six_task_example": 108,
+    "four_task_example": 72,
+    "all_factors_except_three_strategies_pending_author_approval": true
+  },
+  "expected_candidate_limitation": "Remaining 37 original task requests unsupported/unresolved; candidate may match FullEscalate. Retain cases; no policy extension or forced differences.",
+  "withdrawn_proposal": "Four-suite / 480-cell proposal: never approved or executed; archived, not current",
+  "archive": "docs/archive/CROSS_SUITE_PROPOSAL_WITHDRAWN_20261018.md",
+  "tests": {
+    "tests_run": 140,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "successful": true,
+    "network_disabled": true,
+    "live_factories_disabled": true,
+    "credential_loaders_disabled": true
+  },
+  "protected_files_verified": 342,
+  "all_protected_files_unchanged": true,
+  "task29_documented_commands_unchanged": true,
+  "general_runner_and_all_src_unchanged": true,
+  "all_workspace_tools_retained": 24,
+  "raw_directory": "results/raw/workspace_scope_correction_wwy_bwjv",
+  "modified_files": [
+    "AGENTS.md",
+    "README.md",
+    "docs/experiment-plan.md",
+    "docs/SCORING.md",
+    "docs/handoff.md",
+    "docs/setup.md",
+    "docs/LLM_REVIEWER_AND_TASK_RUNNER.md",
+    "configs/experiment_draft.json",
+    "scripts/prepare_experiment_manifest.py",
+    "tests/test_evaluation_accounting.py"
+  ],
+  "current_source_hashes": {
+    "AGENTS.md": "54a1d6f10e259cc2dde29d9f472588f819478861695aadb9d2cce0704b4d81c5",
+    "README.md": "790f9d2d84591896e15fd76d95f21840b70d9f574f076c56a982e4ecbaceb2ab",
+    "docs/experiment-plan.md": "7481ea718378d4b1d2ce2073e19b31251435bb7c790e957a974cdf8fb224c2b5",
+    "docs/SCORING.md": "a8e03da4f757e05c410a6234bb3db3e0099489f9e4fe749ae75f700b235d6095",
+    "docs/handoff.md": "7989361952a85542d263cfedaf42b99826d942d9e3585c8a211394e714392e80",
+    "docs/setup.md": "bd377ef3714fc73ce307e511cb780f31589b5690532c2d232e5e2d40df976b8e",
+    "docs/LLM_REVIEWER_AND_TASK_RUNNER.md": "402d152b93970a8d9601735bc9df404248064ec941056ef2b7db5b5f214e630e",
+    "configs/experiment_draft.json": "d0a84b75b889aec56d18a8696e9839f9436b2e051d8eceac748da7face559550",
+    "scripts/prepare_experiment_manifest.py": "3c12e77e6284562fd69421e9e37be11f71d85b920aae460d4cfc23a4422b040e",
+    "tests/test_evaluation_accounting.py": "16a223194e54883df30fb971cd0e507ffae76ff3d0911129f9839dcca9aa81f8"
+  }
+}

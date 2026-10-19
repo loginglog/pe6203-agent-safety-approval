@@ -1,0 +1,184 @@
+{
+  "scope": "Offline audit only; no inference, network, existing credentials, or original log changes.",
+  "historical_run": "results/raw/restricted_live_task26_ibfuh53n/task_run_2vr9pgmj",
+  "audit_directory": "results/raw/timeout_offline_audit__v9m5j5b",
+  "versions": {
+    "openai": "3.31.0",
+    "httpx": "0.28.1",
+    "httpcore": "1.0.9"
+  },
+  "original_timeout_config": 30.0,
+  "old_factory_offline_reconstruction": {
+    "30": {
+      "httpx": {
+        "connect": 30,
+        "read": 30,
+        "write": 30,
+        "pool": 30
+      },
+      "sdk": {
+        "connect": 30,
+        "read": 30,
+        "write": 30,
+        "pool": 30
+      }
+    },
+    "5": {
+      "httpx": {
+        "connect": 5,
+        "read": 5,
+        "write": 5,
+        "pool": 5
+      },
+      "sdk": {
+        "connect": 5.0,
+        "read": 600,
+        "write": 600,
+        "pool": 600
+      }
+    }
+  },
+  "old_timeout_semantics": "30 seconds independently for connect/read/write/pool; no request wall-clock total and no task deadline.",
+  "proven_timeout_layer": "Client SDK APITimeoutError; HTTP timeout phase was not retained and cannot be recovered.",
+  "past_request_end_time_recorded": false,
+  "past_phase_recorded": false,
+  "limits_observed": {
+    "agent_turns": 2,
+    "agent_turn_cap": 4,
+    "api_attempts": 3,
+    "api_cap": 6,
+    "review_used": 1,
+    "review_cap": 2,
+    "stopped_by_count_or_turn_limit": false
+  },
+  "requests": [
+    {
+      "sequence": 1,
+      "component": "agent",
+      "started_at_utc": "2026-10-17T16:43:07.997256+00:00",
+      "elapsed_seconds": 1.2467088329140097,
+      "error_category": null,
+      "message_count": 2,
+      "message_roles": [
+        "developer",
+        "user"
+      ],
+      "tool_definition_count": 24,
+      "tool_text_characters": 0,
+      "tool_text_utf8_bytes": 0,
+      "tool_content_json_utf8_bytes": 0,
+      "input_token_estimate": null,
+      "token_estimate_note": "Not computed locally; sizes are not token counts.",
+      "request_guard_serialized_bytes": 14377
+    },
+    {
+      "sequence": 2,
+      "component": "reviewer",
+      "started_at_utc": "2026-10-17T16:43:09.249858+00:00",
+      "elapsed_seconds": 1.6768914579879493,
+      "error_category": null,
+      "message_count": 2,
+      "message_roles": [
+        "system",
+        "user"
+      ],
+      "tool_definition_count": 0,
+      "tool_text_characters": 0,
+      "tool_text_utf8_bytes": 0,
+      "tool_content_json_utf8_bytes": 0,
+      "input_token_estimate": null,
+      "token_estimate_note": "Not computed locally; sizes are not token counts.",
+      "request_guard_serialized_bytes": 2629
+    },
+    {
+      "sequence": 3,
+      "component": "agent",
+      "started_at_utc": "2026-10-17T16:43:10.951995+00:00",
+      "elapsed_seconds": 30.005358207970858,
+      "error_category": "APITimeoutError",
+      "message_count": 4,
+      "message_roles": [
+        "developer",
+        "user",
+        "assistant",
+        "tool"
+      ],
+      "tool_definition_count": 24,
+      "tool_text_characters": 27692,
+      "tool_text_utf8_bytes": 27692,
+      "tool_content_json_utf8_bytes": 29054,
+      "input_token_estimate": null,
+      "token_estimate_note": "Not computed locally; sizes are not token counts.",
+      "request_guard_serialized_bytes": 43705
+    }
+  ],
+  "fee_reconciliation": {
+    "reported_success_usd": "0.00041865",
+    "success_ceiling_rate_estimate_usd": "0.000460515",
+    "derived_margin_usd": "0.000041865",
+    "derived_margin_ratio_for_this_run": "0.10",
+    "unknown_timeout_cost_usd": null,
+    "retained_timeout_reservation_usd": "0.021457920",
+    "reported_plus_reservation_usd": "0.021876570",
+    "accounted_with_margin_usd": "0.021918435",
+    "formula": "sum(max(prompt_tokens * ceiling_prompt_rate + completion_tokens * ceiling_completion_rate, reported_cost)) + sum(unsettled_reservations)",
+    "explicit_global_safety_multiplier_configured": false,
+    "margin_source": "Higher endpoint ceiling rates of USD0.165/0.66 per million vs returned costs consistent with USD0.15/0.60. Not another service fee or arithmetic error.",
+    "provider_invoice_obtained": false
+  },
+  "unknown_causes": [
+    "HTTP connect/read/write/pool phase for the historical timeout",
+    "Provider queueing, network/proxy conditions or model processing latency",
+    "Whether the larger input contributed to the timeout",
+    "Provider processing completion or charge for the timed-out request",
+    "Wall-clock jumps versus monotonic duration"
+  ],
+  "original_record_unchanged": true,
+  "tests": {
+    "tests_run": 112,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "successful": true,
+    "network_disabled": true,
+    "live_factories_disabled": true,
+    "credential_loaders_disabled": true,
+    "log": "results/raw/timeout_offline_audit__v9m5j5b/final_guarded_tests.txt"
+  },
+  "preservation": {
+    "all_checks_passed": true,
+    "protected_files": 24,
+    "check_log": "results/raw/timeout_offline_audit__v9m5j5b/preservation_check.json",
+    "original_run_report_policy_prompts_and_billing_code_unchanged": true
+  },
+  "modified_implementation": [
+    "src/approval_gate/completions.py",
+    "src/approval_gate/task_runner.py"
+  ],
+  "new_tests": "tests/test_timeout_diagnostics.py",
+  "source_sha256": {
+    "src/approval_gate/completions.py": "204845a5a4a039d48c0394db28d305830315953b253bfd718536f2c5d526d597",
+    "src/approval_gate/task_runner.py": "3ab6a50e585dc08935cc7696b38b5074b2214e5d1fe697759a864a47569b36f0",
+    "tests/test_timeout_diagnostics.py": "63dc7fc34c86dc7fb076a20ade8e6a395306f39abecfbaa552c5dca6a2caa7a4"
+  },
+  "new_timeout_defaults": {
+    "shared_io_seconds": 30,
+    "agent_override": null,
+    "reviewer_override": null,
+    "task_deadline": null,
+    "hard_request_total": null
+  },
+  "suggested_next_check_not_authorized": {
+    "agent_io_seconds": 90,
+    "reviewer_io_seconds": 30,
+    "cooperative_task_deadline_seconds": 240,
+    "agent_turns": 4,
+    "shared_api_requests": 6,
+    "review_budget_k": 2,
+    "agent_output_tokens": 512,
+    "reviewer_output_tokens": 256,
+    "proposed_new_budget_usd": "0.10",
+    "automatic_retries": 0,
+    "note": "Requires new authorization and refreshed rate verification; previous timeout charge remains unknown."
+  }
+}

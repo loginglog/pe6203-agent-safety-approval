@@ -1,0 +1,152 @@
+{
+  "record_type": "Scoped offline incremental file-policy validation; not benchmark results or TCR@k",
+  "date_singapore": "2026-10-19",
+  "policy_version": "file-rules-v0.4.0",
+  "previous_candidate": "file-rules-v0.3.1",
+  "language": "English independent development examples; original official inputs/answers unchanged",
+  "changes": [
+    "B1 bounded full-name location lookup for named append/delete/share tasks",
+    "B2 complete explicit finite file lists for reading/summarizing/extraction/comparison"
+  ],
+  "unchanged": [
+    "All24 official Workspace tools",
+    "Historical policy source/results",
+    "Baselines",
+    "Approval gate, immutable snapshots and task review budget",
+    "Tool catalog/facts and official implementation",
+    "LLM prompts, fee control and timeouts",
+    "Official tasks and answers"
+  ],
+  "specification": "docs/APPROVAL_POLICY_V0_4.md",
+  "predeclared_examples": "configs/file_rule_examples_v0_4.json",
+  "example_count": 22,
+  "new_test_methods": 20,
+  "validation_before_selector": {
+    "type": "Scoped offline fixture/unit checks, not model behavior or TCR@k",
+    "timestamp_utc": "2026-10-19T11:08:40.721722+00:00",
+    "policy_under_test": "file-rules-v0.4.0",
+    "current_selector": "file-rules-v0.3.1",
+    "tests_run": 106,
+    "failures": 0,
+    "errors": 0,
+    "successful": true,
+    "modules": [
+      "test_approval_gate",
+      "test_approval_policies",
+      "test_file_policy_v0_3",
+      "test_file_policy_v0_3_1",
+      "test_file_policy_v0_4"
+    ],
+    "excluded_method": [
+      "test_file_policy_v0_3_1.FilePolicyV031Tests.test_task28_original_is_a_development_regression_not_a_whitelist"
+    ],
+    "excluded_entry_points": [
+      "Complete discovery suite",
+      "Task/reviewer/model/spend/timeout/attack runner suites",
+      "All historical task-coverage and task29 demos; all official-task or attack-preparation probes"
+    ],
+    "exclusion_reason": "Restrict this change to file/gate fixtures; no official requests/answers/evaluators or restricted preparation.",
+    "network_disabled": true,
+    "clients_and_key_loaders_disabled": true,
+    "official_user_and_attack_tasks_access_blocked": true,
+    "all_official_tools_retained": 24,
+    "model_api_requests": 0,
+    "examples_sha256": "7bfae1ef0f6eebda33abf1ae3a0c39072f0cb0a96faddec15c16ab9684a4b9d3",
+    "raw_directory": "results/raw/file_rules_v0_4_checks_zaklvl9b"
+  },
+  "validation_after_selector": {
+    "type": "Scoped offline fixture/unit checks, not model behavior or TCR@k",
+    "timestamp_utc": "2026-10-19T11:10:50.856425+00:00",
+    "policy_under_test": "file-rules-v0.4.0",
+    "current_selector": "file-rules-v0.4.0",
+    "tests_run": 106,
+    "failures": 0,
+    "errors": 0,
+    "successful": true,
+    "modules": [
+      "test_approval_gate",
+      "test_approval_policies",
+      "test_file_policy_v0_3",
+      "test_file_policy_v0_3_1",
+      "test_file_policy_v0_4"
+    ],
+    "excluded_method": [
+      "test_file_policy_v0_3_1.FilePolicyV031Tests.test_task28_original_is_a_development_regression_not_a_whitelist"
+    ],
+    "excluded_entry_points": [
+      "Complete discovery suite",
+      "Task/reviewer/model/spend/timeout/attack runner suites",
+      "All historical task-coverage and task29 demos; all official-task or attack-preparation probes"
+    ],
+    "exclusion_reason": "Restrict this change to file/gate fixtures; no official requests/answers/evaluators or restricted preparation.",
+    "network_disabled": true,
+    "clients_and_key_loaders_disabled": true,
+    "official_user_and_attack_tasks_access_blocked": true,
+    "all_official_tools_retained": 24,
+    "model_api_requests": 0,
+    "examples_sha256": "7bfae1ef0f6eebda33abf1ae3a0c39072f0cb0a96faddec15c16ab9684a4b9d3",
+    "raw_directory": "results/raw/file_rules_v0_4_checks_hsskj26j"
+  },
+  "body_check_record_count": 29,
+  "recorded_proposals": 48,
+  "recorded_body_entries": 24,
+  "historical_files_verified_unchanged": 49,
+  "intentional_existing_code_reference_changes": [
+    "src/approval_gate/policies.py",
+    "tests/test_spend_control.py",
+    "tests/test_task_runner.py"
+  ],
+  "reference_change_notes": "Only public candidate export and two generic test-version/mock-target references changed; those model/spend runner suites were not executed. Historical behavior tests stayed bound to historical modules.",
+  "network_requests": 0,
+  "model_api_requests": 0,
+  "existing_credentials_read": false,
+  "official_task_request_or_gold_access": false,
+  "official_task_coverage_diagnostic_run": false,
+  "restricted_attack_preparation_resumed": false,
+  "new_human_audit_arrangement": false,
+  "formal_settings_frozen": false,
+  "historical_full_suite_count": 191,
+  "historical_full_suite_rerun": false,
+  "skipped": [
+    "Complete discovery suite",
+    "Task/reviewer/model/spend/timeout/attack runner suites",
+    "All historical task-coverage and task29 demos; all official-task or attack-preparation probes",
+    "test_file_policy_v0_3_1.FilePolicyV031Tests.test_task28_original_is_a_development_regression_not_a_whitelist"
+  ],
+  "skipping_reason": "Restrict this change to file/gate fixtures; no official requests/answers/evaluators or restricted preparation.",
+  "raw_directory": "results/raw/file_rules_v0_4_checks_hsskj26j",
+  "preparation_directory": "results/raw/file_rules_v0_4_offline_18qnl5_r",
+  "source_sha256": {
+    "src/approval_gate/scripted.py": "5121b8241a154f09ca45af2fbd74a0b4e479fd7f9df736a9cd3dc62d486bfc30",
+    "src/approval_gate/task29_preparation.py": "f749828f1fd77b54bc50df272ccee993e8010a45804f7a2a14b3126b38df328b",
+    "src/approval_gate/tool_facts.py": "2fe73fba8f069ad70ce31c08159aa10c9ce0deeccd5ed02d67699521756783a0",
+    "src/approval_gate/development_v0_2.py": "25e63e32079cbbd39c4a1e1e055ed7c2e8b40935623bc5a28d1e8f8ce376bea3",
+    "src/approval_gate/file_policy_v0_4.py": "b990d75e62e119bda73342f56d554b15e852b06b5e44104f42753a1fb632a004",
+    "src/approval_gate/policies_v0_1.py": "ea98b40ec0603a173861390615ddfeb5d4356ecc8dd8e127a1888d3289a52e9b",
+    "src/approval_gate/evaluation.py": "f1bc7a965b662afa41612f1d8f5c78f4d3fc65c819de77731197dd148099d7b6",
+    "src/approval_gate/llm_reviewer.py": "e64269acb98cb5e07cb87dd3ea862cd956c6805f9410ac13a99212b053227dd5",
+    "src/approval_gate/task_runner.py": "9e25973927c10b3a8ce51371908615b3ab785894477db716a39921fc69e9dffb",
+    "src/approval_gate/__init__.py": "a605557693d65031aad962ac7c124323f4714ce466571931b8bab1ff9e4a6e72",
+    "src/approval_gate/offline.py": "712f5dcd5446dfd3bfed93363f0dbe97e8ad0596d95ab4312a224f69492d19c6",
+    "src/approval_gate/completions.py": "79a2d8d270fe7cd4b2ee3e1d5d767d72913ca55f83b3419d23ad7e8828dacb4f",
+    "src/approval_gate/policy_comparison.py": "e080793ec4710c8b293ec4448937eefc78fc3d01feb2082275ca749fbc2350d3",
+    "src/approval_gate/file_policy_v0_3.py": "62f8bce3143c43cbcf2fde12c35fbf6849cbecd0413a6d7dc597123d13e7710d",
+    "src/approval_gate/policies.py": "dc21fa88f248b6ee05a46471e78e4797bdfa98ed0ff0e763951e42edcce4e303",
+    "src/approval_gate/executor.py": "9504123e5dd4894973e153d3947165ba4484ec34902716dbd053814e29d86b81",
+    "src/approval_gate/file_policy_v0_2.py": "456e904aeb9df8c638cdc9c534c2f212bb04e04d7440b5c27650f269184c4323",
+    "src/approval_gate/spend_control.py": "ab93c72142bbfc1611130130f429e9f780706322e00df3735ba8ddfb2f0b2f07",
+    "src/approval_gate/file_policy_v0_3_1.py": "86e637d4a4b2454baf20e39ffc7b1741df9ab11de36e1863c4cdd8ac163a43cd"
+  },
+  "initial_attempts": [
+    "Initial guard installation could not patch an instance property; fixed by class PropertyMock before any tests ran.",
+    "First scoped run:104 methods, one assertion on unresolved wording failed; it was corrected to assert the actual complete retained clause. No authorization boundary was relaxed.",
+    "106 scoped methods passed before selector update;106 passed after selector update and final source reference adjustment."
+  ],
+  "risks": [
+    "Full-name substring searches can return incidental bodies.",
+    "B1 lookup does not grant standalone body-read permission.",
+    "Finite grammar; unresolved conditions, exceptions, pronouns and compound mutations still escalate.",
+    "No real v0.4.0 agent/reviewer check or formal score exists.",
+    "Complete runner/reviewer/spend/timeout regression suites were deliberately not run."
+  ]
+}

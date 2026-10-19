@@ -1,0 +1,77 @@
+{
+  "scope": "Normal-run document/evidence checks only; no model, task, attack or full-suite execution",
+  "checked_at_utc": "2026-10-19T06:05:33.602638+00:00",
+  "status": "limited_checks_passed",
+  "human_audit_status": {
+    "Reviewer A": "pending_human_review",
+    "Reviewer B": "pending_human_review",
+    "adjudication": "pending_human_review"
+  },
+  "attack_preparation_status": "incomplete_on_hold_after_author_reported_platform_restriction",
+  "exact_platform_trigger": "not_confirmed",
+  "normal_run_directory": "results/raw/restricted_live_task29_v031_zezlc5xm/task_run_sofqvdcw",
+  "normal_evidence_files_preserved": 34,
+  "protected_implementation_and_prompt_files": [
+    "src/approval_gate/file_policy_v0_3_1.py",
+    "src/approval_gate/file_policy_v0_3.py",
+    "src/approval_gate/file_policy_v0_2.py",
+    "src/approval_gate/policies.py",
+    "src/approval_gate/policies_v0_1.py",
+    "src/approval_gate/executor.py",
+    "src/approval_gate/spend_control.py",
+    "src/approval_gate/task_runner.py",
+    "src/approval_gate/llm_reviewer.py",
+    "prompts/agent_v1.txt",
+    "prompts/reviewer_v1.txt"
+  ],
+  "checks": {
+    "normal_raw_records_and_shared_result_unchanged": true,
+    "protected_implementation_and_prompts_unchanged": true,
+    "forms_identical_except_role": true,
+    "human_entries_pending": true,
+    "separate_authorization_and_quality": true,
+    "blank_disagreement_log_preserves_originals": true,
+    "original_request_final_answer_and_append_exact_in_pack": true,
+    "two_actual_call_records_match": true,
+    "original_content_plus_exact_suffix": true,
+    "other_files_email_calendar_unchanged": true,
+    "returned_identities_and_lengths_match": true,
+    "normal_request_review_completion_counts": true,
+    "cost_and_token_totals_match": true,
+    "unassessed_safety_and_bill_not_filled": true,
+    "local_links_and_anchors_resolve": true,
+    "fences_balanced": true,
+    "table_column_counts_match": true,
+    "env_and_raw_git_ignored": true
+  },
+  "local_links_checked": 31,
+  "model_api_requests_this_narrowed_work": 0,
+  "real_task_runs_this_narrowed_work": 0,
+  "full_test_suite_run": false,
+  "attack_validation_run": false,
+  "historical_offline_test_count": 191,
+  "files_created": [
+    "docs/audits/task29_v031/FACTS_AND_GUIDE.md",
+    "docs/audits/task29_v031/REVIEWER_A.md",
+    "docs/audits/task29_v031/REVIEWER_B.md",
+    "docs/STATUS_RECONCILIATION_20261019.md",
+    "results/task29_normal_audit_preparation_20261019.json"
+  ],
+  "files_updated": [
+    "README.md",
+    "docs/handoff.md"
+  ],
+  "document_sha256": {
+    "docs/audits/task29_v031/FACTS_AND_GUIDE.md": "e0afe2d09ce5c3458a04a87cbc29dd9cf4e6ddafda09e42894d2e1315f920361",
+    "docs/audits/task29_v031/REVIEWER_A.md": "3ddf7a69f32fbca2539d824b675376e8f8d888b5347516ec1f2cadc5d2df3cc8",
+    "docs/audits/task29_v031/REVIEWER_B.md": "64f8263fbe74c6348d219a5f7b9aef78db0b15aca52149a391a1fbe9a7dccb0c",
+    "docs/STATUS_RECONCILIATION_20261019.md": "e9cd9230a6e8757e8577c1eaea97488c71463e606bf464209c3120d0227e2c6e"
+  },
+  "no_formal_score_generated": true,
+  "limitations": [
+    "Human judgments remain pending.",
+    "Platform blocking cause cannot be determined from available status artifacts.",
+    "Historical tests were not rerun.",
+    "Prior preservation baseline did not include the pre-existing English run report; that report was reused without editing."
+  ]
+}
