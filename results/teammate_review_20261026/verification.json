@@ -1,0 +1,31 @@
+{
+  "date_local": "2026-10-26",
+  "timezone": "Asia/Singapore",
+  "sdk": "3.31.0",
+  "frozen_source_and_evidence_files_verified": 645,
+  "cases_reconciled": 72,
+  "primary_metric_groups_recomputed": 18,
+  "supplement_metric_groups_recomputed": 9,
+  "component_cost_groups_recomputed": 27,
+  "supplement_full_snapshot_pairs_rechecked": 18,
+  "numeric_report_tables_checked": [
+    2,
+    3,
+    4,
+    6,
+    7,
+    8
+  ],
+  "report_svg_numeric_figures_checked": 3,
+  "current_core_and_prompt_hashes_match_all_saved_cells": true,
+  "new_model_requests": 0,
+  "new_environment_tool_executions": 0,
+  "original_scores_reports_or_experiments_modified": false,
+  "independent_human_adjudication": false,
+  "limits": [
+    "Integrity and arithmetic checks do not independently establish semantic authorization.",
+    "PNG copies are byte-preserved; this check verifies their corresponding SVG numeric geometry, not a new pixel-level rendering audit.",
+    "The primary runs have no saved full before/after snapshots.",
+    "Teammate acceptance of task34 has not been established."
+  ]
+}

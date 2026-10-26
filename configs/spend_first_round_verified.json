@@ -1,0 +1,15 @@
+{
+  "budget_usd": "0.10",
+  "prompt_usd_per_token": "0.000000165",
+  "completion_usd_per_token": "0.00000066",
+  "context_tokens": 128000,
+  "max_request_bytes": 64000,
+  "agent_max_tokens": 512,
+  "reviewer_max_tokens": 256,
+  "model": "openai/gpt-4o-mini",
+  "pricing_source": "https://openrouter.ai/api/v1/models/openai/gpt-4o-mini/endpoints",
+  "verified_at_utc": "2026-10-19T13:37:15.120780+00:00",
+  "verification_record": "results/raw/openrouter_setup_wdxm_hxg/summary.json",
+  "rate_selection": "Observed maximum per-token rates across the returned 128000-context endpoints; request routing remains constrained by require_parameters and max_price, with zero per-request extra charge allowed.",
+  "scope": "One task invocation under the accepted first-round settings. Does not authorize additional or repeated runs or reset the project-wide budget."
+}

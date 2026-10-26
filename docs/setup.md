@@ -1,6 +1,6 @@
 # Environment and access setup
 
-The current onboarding procedure is [handoff](handoff.md#getting-started-after-code-access-is-arranged). Read its access warning first: most implementation is untracked in this local checkout, and private raw evidence is ignored. A successful clone of the initial skeleton does not establish receipt of the current system. Publishing/sharing needs separate author authorization; do not push or upload private material automatically.
+Use the reviewed final-release revision and [handoff](handoff.md#getting-started-after-code-access-is-arranged), not the initial skeleton. The author requested the final-report upload on26 October2026. Code, selected summaries and reproduction materials are included; private raw evidence remains ignored and must be shared separately through authorized access. See [release notes](FINAL_RELEASE_20261026.md). No additional experiment or private-evidence publication follows from obtaining the code.
 
 ## Observed environment
 
@@ -10,11 +10,23 @@ The current onboarding procedure is [handoff](handoff.md#getting-started-after-c
 | AgentDojo package | 0.1.35 |
 | Installed Git commit | 089ed468cf3ed0322acc66b0211f26d9d90dbf60 |
 | Benchmark | v1.2.2 |
-| OpenAI SDK | 3.31.0 |
-| Current candidate | file-rules-v0.4.0 (scoped offline verification only) |
+| OpenAI SDK (required exact version) | 3.31.0 |
+| Current candidate | file-rules-v0.4.0; scoped offline checks and recorded normal-condition observations |
 | Agent/reviewer prompt versions | agent-v1 / reviewer-v1 |
 
 Installation uses the pinned commit in the handoff, not changing main. Full transitive dependency lock and independent teammate reproduction are not obtained. Installation requires internet; the model-free demos do not. Existing environments/configs must be preserved. All terminal operations use the repository root; commands in the handoff are relative and do not require the author's absolute path.
+
+## Required OpenAI SDK pin
+
+OpenAI SDK 3.31.0 is now an author-approved requirement for local execution and all future teammate reproduction. Use the shared [requirements.txt](../requirements.txt), which also pins AgentDojo's source commit. After creating the Python 3.12.14 virtual environment described in the handoff, run:
+
+```bash
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -c "from importlib.metadata import version; actual = version('openai'); print('OpenAI SDK:', actual); assert actual == '3.31.0', 'Expected openai==3.31.0; install requirements.txt before continuing'"
+.venv/bin/python -m pip check
+```
+
+Verify this version before either guarded check or any separately authorized formal run. Stop if verification fails. Do not replace the exact pin with a minimum version or install an unconstrained SDK. Installation with requirements.txt is also the correction for an existing project environment that resolved SDK 3.35.1. This approved SDK correction does not authorize changing other dependencies or approval rules. A full transitive lock is still pending; retain package inventories with verification records. Historical records using another SDK version remain unchanged.
 
 ## Local secrets and paid execution boundary
 

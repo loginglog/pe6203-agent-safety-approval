@@ -1,0 +1,31 @@
+{
+  "schema_version": "project-budget-decision-v1",
+  "status": "budget_limits_confirmed_all_normal_cells_attempted_remaining_campaign_pending",
+  "decision_date_local": "2026-10-19",
+  "timezone": "Asia/Singapore",
+  "decision_source": "The author instructed us to follow the original budget draft.",
+  "original_proposal_reference": "configs/experiment_draft.json",
+  "currency": "USD",
+  "project_budget_limit_usd": "20.00",
+  "per_task_run_budget_limit_usd": "0.10",
+  "per_task_run_scope": "All agent, policy, and reviewer API usage within one task invocation; not a per-request allowance.",
+  "budget_is_spending_target": false,
+  "api_execution_ready": false,
+  "api_execution_readiness_scope": "The complete requested campaign; bounded subsets of 36 normal baseline cells and 18 normal v0.4.0 candidate cells have already been attempted under the author's later instructions.",
+  "campaign_finalized": false,
+  "pending_before_execution": [
+    "Complete the requested injected-condition protocol or explicitly resolve its unavailable live implementation",
+    "Authorization scoring evidence, denominator and complete final result interpretation",
+    "Campaign-wide budget accounting and stop enforcement, including unresolved charges",
+    "Final tested source and prompt identity and explicit run manifest"
+  ],
+  "enforcement_status": "Existing SpendControl enforces USD0.10 per-run program-side reservations. Distinct fixed allocations of USD3.60 baselines + USD1.80 candidates + USD0.10 diagnostic slot total USD5.50 within the USD20 project ceiling; the lower non-resetting USD10 key limit and remaining allowance were verified. Full-campaign shared accounting is not implemented by this decision file.",
+  "observed_baseline_summary": "results/first_round_baselines_20261019.json",
+  "observed_all_normal_summary": "results/first_round_normal_verified_20261019.json",
+  "not_a_runner_spend_control_file": true,
+  "notes": [
+    "The original draft remains unchanged as history. Later instructions adopted its task/model/k/runtime settings and explicitly selected candidate v0.4.0; see configs/first_round_experiment.json. Keep task28 labeled development/exploratory. Live injection protocol and authorization audit remain pending.",
+    "The project amount is an aggregate ceiling, not a separate allowance for each strategy or a target to spend.",
+    "Program-side limits are not a provider billing hard cap. Unknown failed-request charges remain reserved or explicitly unresolved."
+  ]
+}

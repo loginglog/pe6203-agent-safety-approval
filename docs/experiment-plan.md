@@ -1,6 +1,12 @@
 # Remaining evaluation work and author decisions
 
-**Workspace-only evaluation; formal task subset and execution settings pending author approval.** This file records required work and unresolved settings. It selects no new design, experiment route, task list, attack condition, k values, repetitions, scale or budget. Follow the [original-assignment checklist](COURSE_REQUIREMENTS.md); earlier assistant-written plans are not instructor evidence.
+## Final release checkpoint
+
+The planning text below is historical. The author subsequently approved the first54 normal invocations and fixed18-invocation supplement; both are complete and described in the [final report](../report/PE6203_Report_Final.docx). Models, k=0/1/2, task exposure, review/cost counts and unchanged v0.4.0 implementation are recorded in the released manifests/results. Current safe completion uses [research scoring v1.1](../results/authorization_research_20261026_v1_1/README.md). The confirmed unauthorized-auto-approval trajectory remains missing. No further collection, tuning or TA inquiry is authorized. Final review/reproduction and publication details are in [release notes](FINAL_RELEASE_20261026.md).
+
+## Historical planning record
+
+**Workspace-only evaluation; budget limits confirmed, formal task subset and other execution settings pending author approval.** This file records required work and unresolved settings. The author has accepted the original USD 20 total / USD 0.10 per-task budget amounts, recorded in [approved_budget.json](../configs/approved_budget.json). Other designs, experiment routes, task lists, conditions, k values, repetitions, and scale remain unselected. Follow the [original-assignment checklist](COURSE_REQUIREMENTS.md); earlier assistant-written plans are not instructor evidence.
 
 ## Required deliverables
 
@@ -11,6 +17,8 @@ Current implementation and version-specific normal evidence are detailed in [han
 ## Author choices already settled
 
 Workspace only, all 24 official tools; current development candidate file-rules-v0.4.0 (B1/B2 offline update, not frozen formal settings); English evaluation inputs/prompts/examples/answers/baselines/demonstrations and project documents/comments. Limited complete-name searches accept declared incidental-body risk under the policy conditions; proven conflicts deny, uncertain operations escalate. Tasks 26/28/29/35 are development-used. These are not reopened.
+
+Budget amounts: USD 20 aggregate and USD 0.10 per task invocation, including agent, policy, and reviewer API usage. These are confirmed ceilings, not a target expenditure or approval of the historical draft's other settings. Campaign-wide accounting and stops still need to be implemented or verified before paid execution; the existing per-run SpendControl does not itself provide a shared project budget.
 
 ## Settings requiring confirmation before formal collection
 
@@ -24,7 +32,7 @@ Workspace only, all 24 official tools; current development candidate file-rules-
 | Task denominator and incomplete/error cases | Specify before collection; course defines safe fraction, but does not prescribe our missing/not-run bookkeeping convention. See scoring. |
 | Failure evidence | Required over-conservative and over-permissive trajectories not yet obtained. Confirm how the final report will substantiate both without fabricated cases. |
 | Conditions | No default normal/attack pairing. Specific attack work is not a course-prescribed prerequisite and remains stopped. No new condition is chosen here. |
-| Cost and authorization | No current run authorization. Confirm independent limits/total funding before any paid work; old USD0.10 runs are consumed and USD20 was planning only. |
+| Cost and authorization | Budget amounts confirmed: USD 20 total and USD 0.10 per task invocation. Final model/rates, remaining settings, aggregate budget enforcement and stopping rules are still pending. Old per-run authorizations remain consumed; no new paid run is launched by recording these limits. |
 | Shared code/evidence | Current implementation largely untracked; authorize publication and appropriate private evidence access separately. |
 
 Formal scale cannot currently be assigned a number. For an approved uniform grid only:
@@ -38,7 +46,7 @@ This formula chooses no factor. No480/108/72 total is current. There is insuffic
 
 ## Existing artifacts that are not approved instructions
 
-[experiment_draft.json](../configs/experiment_draft.json) is retained unchanged as a historical proposal. Its task list includes development task28, its attack-related condition/metadata and numeric settings are unapproved, campaign_finalized=false and dispatch_supported=false. The manifest helper rejects the development overlap. Do not run it as a default plan, remove its exclusions to make it pass, or treat its old values as instructor requirements. Its existence does not make an attack condition mandatory. The general runner's optional capabilities are not the project's chosen experiment.
+[experiment_draft.json](../configs/experiment_draft.json) is retained unchanged as a historical proposal. Only its two budget amounts have subsequently been accepted in [approved_budget.json](../configs/approved_budget.json). Its task list includes development task28; its other numeric settings and attack-related condition/metadata remain unapproved, campaign_finalized=false and dispatch_supported=false. The manifest helper rejects the development overlap. Do not run it as a default plan, remove its exclusions to make it pass, or treat its old values as instructor requirements. Its existence does not make an attack condition mandatory. The general runner's optional capabilities are not the project's chosen experiment.
 
 The [cross-suite proposal](archive/CROSS_SUITE_PROPOSAL_WITHDRAWN_20261018.md) was withdrawn, never approved/executed. The [pre-reconciliation document snapshot](archive/PRE_REQUIREMENTS_HANDOFF_20261019.json) retains other superseded suggestions. Historical logs and results remain unchanged.
 

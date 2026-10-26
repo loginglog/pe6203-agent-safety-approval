@@ -1,0 +1,5 @@
+# Required project dependencies. Install from the repository root.
+# The OpenAI SDK version is an author-approved reproducibility requirement.
+# Transitive dependencies are not fully locked by this file.
+agentdojo @ git+https://github.com/ethz-spylab/agentdojo.git@089ed468cf3ed0322acc66b0211f26d9d90dbf60
+openai==3.31.0

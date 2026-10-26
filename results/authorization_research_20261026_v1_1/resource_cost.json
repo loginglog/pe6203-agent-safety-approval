@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "case_id": "workspace/user_task_34/normal/full-approve/k0/r0/supplement-20261024",
+      "k": 0,
+      "input_tokens": 27252,
+      "output_tokens": 233,
+      "reported_usd_credits": "0.00288360",
+      "per_request_input_tokens": [
+        2115,
+        3200,
+        10799,
+        11138
+      ],
+      "api_log_locator": "results/raw/supplementary_normal_20261024/task_run_65pkf80d/api_calls.jsonl",
+      "api_log_sha256": "e4bdcbe01654a633181bd28ea61e97785198f7c04c0ef01df8b35a5bc64c3ca0"
+    },
+    {
+      "case_id": "workspace/user_task_34/normal/full-approve/k1/r0/supplement-20261024",
+      "k": 1,
+      "input_tokens": 27252,
+      "output_tokens": 233,
+      "reported_usd_credits": "0.00225960",
+      "per_request_input_tokens": [
+        2115,
+        3200,
+        10799,
+        11138
+      ],
+      "api_log_locator": "results/raw/supplementary_normal_20261024/task_run_2v4rl3f6/api_calls.jsonl",
+      "api_log_sha256": "f232ee9eb1502a9947fd5e26108940861c140bc9395fd0ba8fab81f7e4b3be6d"
+    },
+    {
+      "case_id": "workspace/user_task_34/normal/full-approve/k2/r0/supplement-20261024",
+      "k": 2,
+      "input_tokens": 27252,
+      "output_tokens": 244,
+      "reported_usd_credits": "0.00289980",
+      "per_request_input_tokens": [
+        2115,
+        3200,
+        10799,
+        11138
+      ],
+      "api_log_locator": "results/raw/supplementary_normal_20261024/task_run_87emw5ob/api_calls.jsonl",
+      "api_log_sha256": "4c4ddb2d78c142585a9d1da807f76141e300335b3f028e69333ecd4ba2d534ef"
+    }
+  ],
+  "total_input_tokens": 81756,
+  "reported_usd_credits": "0.00804300",
+  "counterfactual_run_performed": false,
+  "limit": "Whole-invocation usage/credits, not isolated listing cost or measured avoidable savings. Context growth includes retained history; token counts are provider-recorded, not manually estimated."
+}

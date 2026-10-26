@@ -1,5 +1,11 @@
 # Teammate handoff
 
+## Final release status
+
+The26 October2026 author-approved upload adds the [final report](../report/PE6203_Report_Final.docx), primary54/supplementary18 normal results, analysis workbook/figures, current [research assessment v1.1](../results/authorization_research_20261026_v1_1/README.md), supporting scripts/tests and SDK3.31.0 requirements. Source policy/runtime and prompts remain at the recorded4ee8d83 implementation. Task34 is accepted under disclosed post-hoc R6a; token costs and the missing confirmed permissive trajectory remain explicit. See [release review](FINAL_RELEASE_20261026.md).
+
+The historical checkpoint sections below retain earlier pending/access statements and do not override this status. Clone the final release, not the skeleton, and reproduce the two guarded checks after installing the exact requirements. Private raw evidence, credentials and environment snapshots remain unavailable through Git. Repository privacy/access settings were not changed; authorized grader/collaborator access must be arranged by the owner. No new paid run is authorized.
+
 Read this file first, then the [original-assignment checklist](COURSE_REQUIREMENTS.md). The execution gate, current candidate file-rules-v0.4.0, two baselines, reviewer and single-task runner exist locally. Normal development tasks 26 and 29 have version-specific live evidence. Formal strategy comparisons, safe-completion judgments, required failure examples, report and presentation remain unfinished. **A usable local handoff document does not mean the code or evidence has been delivered through GitHub.**
 
 This handoff selects no new task, k range, repetition count, attack condition, model or budget. Workspace and all 24 tools are fixed author choices. Prompts, inputs, examples, gold answers, baseline descriptions, demonstrations, documentation and comments are English. Author-facing explanations are Chinese. No further paid request is authorized.
@@ -34,7 +40,7 @@ For an existing checkout, reuse it and inspect status; do not overwrite changes,
 
 Installation needs internet access, but does not itself invoke model inference. Do not run it as an offline check. Current inspected environment: Python 3.12.14, AgentDojo 0.1.35 from commit `089ed468cf3ed0322acc66b0211f26d9d90dbf60`, benchmark v1.2.2, OpenAI SDK 3.31.0. Full transitive dependency lock and independent teammate reproduction have not been obtained.
 
-The installation source is `https://github.com/ethz-spylab/agentdojo.git`, confirmed from the installed package metadata, with the resolved commit above. There is no requirements/lock file in this checkout; the commit pins AgentDojo source, while pip resolves its declared dependencies. The observed OpenAI SDK version is evidence about this machine, not a claim that this installation command locks it.
+The installation source is `https://github.com/ethz-spylab/agentdojo.git`, confirmed from the installed package metadata, with the resolved commit above. The author now requires **OpenAI SDK 3.31.0** for local work and all future reproduction. The shared [requirements.txt](../requirements.txt) pins both this SDK version and AgentDojo's source commit. Other transitive dependencies are still resolved by pip; this is not a complete lock file. Earlier checks using SDK 3.35.1 retain their original environment labels and are not relabeled as 3.31.0 results.
 
 For a new matching environment, confirm Python first and avoid overwriting an existing .venv:
 
@@ -43,11 +49,12 @@ python3.12 --version
 if [ ! -d .venv ]; then python3.12 -m venv .venv; fi
 source .venv/bin/activate
 python --version
-python -m pip install "agentdojo @ git+https://github.com/ethz-spylab/agentdojo.git@089ed468cf3ed0322acc66b0211f26d9d90dbf60"
+python -m pip install -r requirements.txt
 python -c "from importlib.metadata import version; print(version('agentdojo'))"
+python -c "from importlib.metadata import version; actual = version('openai'); print('OpenAI SDK:', actual); assert actual == '3.31.0', 'Expected openai==3.31.0; install requirements.txt before continuing'"
 ```
 
-Ensure the reported Python/AgentDojo versions match; stop and record dependency differences rather than treating another installation as reproduced. The pinned AgentDojo commit alone does not lock its dependencies. See [setup](setup.md).
+Ensure the reported Python/AgentDojo versions match and OpenAI SDK is exactly 3.31.0 before running verification or evaluation. If the SDK differs, install requirements.txt into the agreed project environment and verify again; do not proceed on another SDK version or silently upgrade the pin. Record other dependency differences rather than claiming identical environments. The pinned AgentDojo commit alone does not lock its dependencies. See [setup](setup.md).
 
 ### 3. Keep your own configuration local
 
@@ -159,7 +166,7 @@ The two teammates should first reproduce the guarded checks independently, then 
 | Completion and unauthorized execution | Pending author approval: evidence and independent authorization criteria, collateral-body treatment within the confirmed lookup choice, uncertain judgments and required failure evidence. Policy/reviewer approval is not a safety label. |
 | Incomplete/not-run cases and denominators | Pending author approval: explicit inclusion, exclusion or separately reported status under the course metric definition; preserve failed and missing records. |
 | Agent and reviewer models | Pending author approval; historical `openai/gpt-4o-mini` use does not select formal models. Existing English prompt versions remain unchanged. |
-| Total spending and stops | Pending separate author authorization; confirm aggregate budget, per-run reservations and unknown-charge handling. No unused historical balance authorizes new calls. |
+| Total spending and stops | Subsequently confirmed in configs/approved_budget.json: USD 20 total and USD 0.10 per task invocation. Final model/rates, shared budget enforcement, remaining runtime settings and stops are pending. No unused historical balance authorizes new calls. |
 | Publication and private evidence access | Pending author authorization of an exact reviewed revision and safe evidence-sharing arrangement; this preparation does not publish or message anyone. |
 
 Which evidence will support both required failure categories also remains unresolved. These are unanswered settings, not invitations to expand scope or adopt an old proposal.
